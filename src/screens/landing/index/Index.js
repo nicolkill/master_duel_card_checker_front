@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import DATA from "../../../services/data_source";
+import DATA from "../../../services/data_source/index";
 import Section from "../../../components/ui/landing/Section";
 
 import CheckUserScroll from "../../../components/behaviours/CheckUserScroll";
@@ -23,7 +23,12 @@ function Index() {
         {data.map((booster, i) => (
           <div key={"booster_card_section_" + i}>
             <div className="text-4xl py-4">
-              {booster.name}
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href={`https://www.yugiohcardguide.com/sets/${booster.id}.html`}>
+                {booster.name}
+              </a>
             </div>
             <div className="grid grid-cols-10 gap-2">
               {booster.cards.map((c, i) => (
