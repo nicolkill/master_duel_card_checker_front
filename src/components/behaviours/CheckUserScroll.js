@@ -3,7 +3,6 @@ import { useEffect } from "react";
 function CheckUserScroll({bottomReached}) {
   useEffect(() => {
     function handleScroll() {
-      console.log('handleScroll')
       const scrollTop = document.documentElement.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight;
       // Calculates the height of the client viewport, adjusted for the device's pixel ratio

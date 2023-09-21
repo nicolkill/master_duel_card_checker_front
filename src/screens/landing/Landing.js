@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import {Outlet} from "react-router-dom";
 
-// import {StateContext} from "../../state/global_state/StateProvider";
 import firebase from "../../services/firebase";
+import Search from "../../components/Search";
 import LandingComponent from "../../components/ui/landing/Landing";
+import {StateContext} from "../../state/global_state/StateProvider";
 // import Dropdown from "../../components/Dropdown";
 
 // const DROPDOWN = [
@@ -80,8 +81,19 @@ const MENU = [
 function Landing() {
   firebase.registerScreen("landing");
 
+  const [, dispatch] = useContext(StateContext);
+
+  const handleChange = (value) => {
+    dispatch({ type: "search_change", newValue: value });
+  };
+
+  const search = {
+    element: <Search changeCallback={handleChange} submitCallback={() => {}} showSubmit={false} />
+  };
+  const menu = MENU.concat([search]);
+
   return (
-    <LandingComponent menu={MENU}>
+    <LandingComponent menu={menu}>
       <Outlet/>
     </LandingComponent>
   );

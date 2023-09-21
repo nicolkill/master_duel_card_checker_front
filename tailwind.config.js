@@ -11,6 +11,11 @@ module.exports = {
         'halfscreen': '50vh',
         'footer': '20vh',
       },
+      width: {
+        '200px': "200px",
+        '300px': "300px",
+        '500px': "500px"
+      },
       minWidth: {
         '100px': '100px',
       },

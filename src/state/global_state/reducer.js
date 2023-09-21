@@ -25,6 +25,11 @@ export const reducer = (state, action) => {
         profile: action.newValue,
         session: action.newValue !== null,
       }
+    case "search_change":
+      return {
+        ...state,
+        search: action.newValue,
+      }
 
     default:
       return state
@@ -36,4 +41,5 @@ export const initialState = {
   session: null,
   profile: null,
   notifications: [],
+  search: "",
 }

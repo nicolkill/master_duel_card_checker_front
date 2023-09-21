@@ -4,7 +4,7 @@ import {PropTypes} from "prop-types";
 import InputText from "./form/InputText";
 import Button from "./Button";
 
-function Search({submitText, loading, placeholder, defaultValue, submitCallback, changeCallback}) {
+function Search({submitText, loading, placeholder, defaultValue, submitCallback, changeCallback, showSubmit}) {
   const [value, setValue] = useState(defaultValue);
 
   const handleInputChange = (name, value) => {
@@ -25,17 +25,17 @@ function Search({submitText, loading, placeholder, defaultValue, submitCallback,
           name="input"
           placeholder={placeholder}
           value={value}
-          extraClasses="rounded-l-md"
+          extraClasses={(showSubmit ? "rounded-l-md" : "rounded-md")}
           changeCallback={handleInputChange} />
       </div>
-      <Button extraClasses="shadow rounded-none rounded-r-md py-0" callback={handleSubmitForm}>
+      {showSubmit && <Button extraClasses="shadow rounded-none rounded-r-md py-0" callback={handleSubmitForm}>
         {loading &&
         <span className="material-icons animate-spin">autorenew</span>
         }
         <span className="flex-grow pl-2">
           {submitText}
         </span>
-      </Button>
+      </Button>}
     </div>
   );
 }
@@ -47,6 +47,7 @@ Search.propTypes = {
   defaultValue: PropTypes.string,
   changeCallback: PropTypes.func,
   submitCallback: PropTypes.func.isRequired,
+  showSubmit: PropTypes.bool,
 };
 
 Search.defaultProps = {
@@ -54,6 +55,7 @@ Search.defaultProps = {
   submitText: "Search...",
   placeholder: "Search",
   defaultValue: "",
+  showSubmit: true,
 };
 
 export default Search;
