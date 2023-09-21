@@ -1,0 +1,22 @@
+import React from "react";
+import {PropTypes} from "prop-types";
+
+import Tag from "./Tag";
+
+const DATA = "data:image/webp;base64,UklGRjADAABXRUJQVlA4WAoAAAAQAAAA3gAANQAAQUxQSOkAAAABkCvbtmlbtm3btm07cmRE9r2REdnWs23btm2/8QEPI42ICRD4I+vwH/1HVIKbCnBTCm4KfnOT/xvU5P4GNVk/QU3mT1CT+hPUJH0HNbHfQE3UN1AT/hXUhHwCNf6fQI3PR1Dj+Q7UuL0FNc5vQY3DK1Bj+xzUWD0HNeZPQI3pI1Bj/ADUGNwDNbq3QY3ODVCjdQ3UqF8BNaoXQY3KOVCjeBrUyJ8ANfJHQY3sIVAjtR/USO0BNZLbQY3YFlAjtgnUiK0FNSLLoEZ4AdQIT4MaoTFQIzgCagQHQI1gP7jpBjft4KYN3DaBXABWUDggIAIAALARAJ0BKt8ANgA+bTSVSKQipKEh1VuYkA2JaQhwAugH+A2AD7ABSO5Nh5J3l5MS4Yuj1anrrSWd7CQ2bTpGTZAN4dKHs3b9/fgqllVn1TKpRTFDz3XaAsankQ6Evw2mtEoYZBFcVt7qYPKhME9Z/iHMKwPHQNM6bwEsM4CaUa5c9BzzzCneQHQzehMLmem7e4VXKyAGAAD+1c4yZb7/7b9J28mjomWz71Cv3PFaMwYEc1tN4JhRg+JNCMgEnVMW2YK8H4hKNWi01X+y7//TPOf9tMrWYQTdddT1cAlsZeTZvzGFBfQ5AbmLj2q4Nbk5n+ab8Q1uu/3/n/JXydfh6b5v01pO67MYR3wddF4NGef2bfv4Ay6nfP/I/c8i1NOkAAMFD0R3/SU4SNCinyCCeRf1l3OH/iY+951/vJ2ixg4qQTPQIfYN1f6CRb//DXIJ2GTta553Io7L4kp2fo7oj04WsWsvPbMdW2fmxzR2QmdGPLVvNO+/oDI1btEYu9ZjhZKnyrmxiGmNJvBuqd/pgJw/2Eu+/H/APb6xPur/q4toq5uOgOBWDG/wPG8dZDHfNm49Whxn8+39IuPu7/+A8tL8X9Nev0kheoM8UBldNOPK0SHzd1B2XrNVS5sKVWw1Wa7ulbnmXM4DMdVH2q5KF06Ei+gtB+3003TvsFvVh8JxSqmCBoYt1NoXTFLdQaaCHiGptYo24q7UAU7M6rG2AAA=";
+
+function UR({className}) {
+  return (
+    <Tag data={DATA} className={className}/>
+  );
+}
+
+UR.propTypes = {
+  className: PropTypes.string,
+};
+
+UR.defaultProps = {
+  className: "",
+};
+
+export default UR
