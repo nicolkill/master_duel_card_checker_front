@@ -94,6 +94,9 @@ function Index() {
                             alt={c.name}
                             className=""/>
                         </div>
+                        <span className="text-md font-bold mt-2">
+                          {c.name}
+                        </span>
                         <p className="text-xs mt-2 p-2 border rounded">
                           {c.ycg_data.description}
                         </p>
