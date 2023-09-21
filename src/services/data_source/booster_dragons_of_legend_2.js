@@ -1,4 +1,4 @@
 const DATA = [
-{"cards":[],"id":"dragons-of-legend-2","index":89,"name":"Dragons of Legend 2"}];
+{"cards":[{"card_image":"https://www.mtgmexico.com/cdn/shop/products/16d296ba-1f3f-5d28-9278-ff639020e39b_6d5ad9a4-aeff-4dfa-ad46-59480bc083ee_800x.jpg","id":"12f8fffe-9184-4968-af57-e90e73f24968","inserted_at":"2023-09-21T16:37:00","master_duel_released":false,"mdm_data":null,"name":"Aqua Story - Urashima","updated_at":"2023-09-21T16:46:14","ycg_booster":["dragons-of-legend-the-complete-series-booster-pack","dragons-of-legend-2"],"ycg_data":{"atk":"","attribute":"","booster_card_id":"DRL2-EN045","booster_set":"DRL2","def":"","description":"If you have an \"Aquaactress\" monster in your Graveyard: Target 1 monster on the field; until the end of this turn, its effects are negated, its ATK and DEF become 100, also it is unaffected by your opponent's card effects.","level":"","name":"Aqua Story - Urashima","race":"Normal","release_packs":["dragons-of-legend-2"],"type":"Trap"}}],"id":"dragons-of-legend-2","index":89,"name":"Dragons of Legend 2"}];
 
 export default DATA;
